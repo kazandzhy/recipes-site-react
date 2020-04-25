@@ -1,9 +1,8 @@
 .Footer {
-  height: 18.5em;
+  height: 20em;
   background-color: #1c110a;
   min-width: 18.75em;
   z-index: 1000;
-  min-width: 18.75em;
 }
 
 .FooterContent {

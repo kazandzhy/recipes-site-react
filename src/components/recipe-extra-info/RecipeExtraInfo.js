@@ -28,7 +28,7 @@ export default function RecipeExtraInfo() {
       <Card
         headText="Who we are?"
         headSize="2"
-        text="Sousmate has existed for 10 years. We have 1 million subscribers and more than 100 employees."
+        text="Sousmate has existed for 10 years and we have more than 1 million subscribers."
         className={s.ImportantInfo}
       />
     </div>
