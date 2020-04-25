@@ -1,0 +1,26 @@
+.PagesList li a {
+  color: #e9b44c;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.PagesList li a:hover {
+  color: #50a2a7;
+}
+
+.PagesList li a:focus {
+  outline: 0;
+}
+
+.PagesList ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .PagesList li a {
+    font-size: 1.1em;
+  }
+}

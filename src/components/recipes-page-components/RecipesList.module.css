@@ -1,0 +1,65 @@
+.RecipesList {
+  display: grid;
+  padding: 1em 2em;
+}
+
+.ListGroupItem {
+  background-color: #800000;
+  border: 0.5px solid brown;
+  font-size: 1.1em;
+  color: #e9b44c;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.8em;
+  padding: 1em;
+  cursor: pointer;
+  height: 3.5em;
+  box-shadow: 2px 5px 4px 5px #2f2626;
+}
+
+.ListGroupItem:hover {
+  background-color: #280000;
+  border: 0.5px solid #280000;
+}
+
+ul.RecipesList {
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 2em;
+}
+
+@media only screen and (max-width: 930px) {
+  .RecipesList {
+    padding: 0 1em;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  ul.RecipesList {
+    padding-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .RecipesList {
+    padding: 0 0.5em;
+  }
+
+  .RecipesList li {
+    margin-top: 0.3em;
+  }
+
+  ul.RecipesList {
+    padding-bottom: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .RecipesList li {
+    margin-top: 0.2em;
+  }
+
+  ul.RecipesList {
+    padding-bottom: 0.5em;
+  }
+}

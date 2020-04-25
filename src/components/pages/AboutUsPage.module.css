@@ -1,0 +1,166 @@
+.AboutUsPage {
+  height: auto;
+  padding: 1em;
+}
+
+.AboutUsContent {
+  overflow: hidden;
+  color: #2f2626;
+  background-color: #800000;
+
+  padding-bottom: 3em;
+  padding-top: 2em;
+  padding-left: 3em;
+  box-shadow: 2px 5px 4px 5px #2f2626;
+}
+
+.AboutUsPage p {
+  font-size: 1.125em;
+  font-family: sans-serif;
+  text-indent: 1em;
+  line-height: 1.5em;
+  background-color: #e9b44c;
+  height: auto;
+  border-radius: 1em;
+  padding: 0.7em;
+  box-shadow: 1px 2px 2px 2px #2f2626;
+}
+
+.AboutUsPage h1 {
+  font-size: 3.5em;
+  margin-bottom: 1em;
+  margin-top: 0;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+  color: #e9b44c;
+}
+
+.AboutUsMsg2 span {
+  font-size: 1em;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+
+.AboutUsMsg {
+  width: 45%;
+}
+
+.AboutUsMsg2 {
+  float: right;
+  bottom: 0;
+  width: 40%;
+  margin-right: 4em;
+  margin-top: 6%;
+}
+
+.Team img {
+  float: left;
+  width: 45%;
+  border-radius: 1em;
+  margin-top: 5em;
+  box-shadow: 1px 2px 2px 2px #2f2626;
+}
+
+.Logo img {
+  float: right;
+  width: 40%;
+  margin-top: -11%;
+  margin-right: 3em;
+}
+
+@media only screen and (max-width: 800px) {
+  .Logo img {
+    margin-right: 4%;
+    width: 45%;
+  }
+
+  .AboutUsMsg {
+    width: 40%;
+    height: auto;
+  }
+
+  .AboutUsMsg2 {
+    width: 40%;
+    height: auto;
+    margin-right: 2em;
+  }
+
+  .Team img {
+    width: 48%;
+  }
+
+  .AboutUsPage {
+    padding-bottom: 1.5em;
+  }
+
+  .AboutUsPage h1 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .AboutUsPage {
+    margin: 0;
+    padding: 0;
+  }
+
+  .AboutUsPage h1 {
+    text-align: center;
+    margin-top: 0.5em;
+  }
+
+  .Logo img,
+  .Team img,
+  .AboutUsMsg,
+  .AboutUsMsg2 {
+    float: none;
+    display: block;
+  }
+
+  .Logo img {
+    padding-bottom: 1.5em;
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .AboutUsMsg {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+  }
+
+  .AboutUsMsg2 {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .Team img {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    margin-top: 2em;
+  }
+
+  .AboutUsContent {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .AboutUsPage h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+  }
+
+  .Logo img {
+    width: 80%;
+  }
+
+  .AboutUsMsg2 {
+    margin-bottom: 2em;
+  }
+}

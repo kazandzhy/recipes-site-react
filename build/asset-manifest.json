@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b3463fa.chunk.css",
+    "main.js": "/static/js/main.b8b8789d.chunk.js",
+    "main.js.map": "/static/js/main.b8b8789d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ab683a5a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ab683a5a.js.map",
+    "static/js/2.2d884967.chunk.js": "/static/js/2.2d884967.chunk.js",
+    "static/js/2.2d884967.chunk.js.map": "/static/js/2.2d884967.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.93d74e554a60d2845d9e77eb50d9a53d.js": "/precache-manifest.93d74e554a60d2845d9e77eb50d9a53d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4b3463fa.chunk.css.map": "/static/css/main.4b3463fa.chunk.css.map",
+    "static/js/2.2d884967.chunk.js.LICENSE.txt": "/static/js/2.2d884967.chunk.js.LICENSE.txt",
+    "static/media/barbeque-chicken.jpg": "/static/media/barbeque-chicken.0601f5b5.jpg",
+    "static/media/chocolate-chip-cookies.jpg": "/static/media/chocolate-chip-cookies.0600041f.jpg",
+    "static/media/ContactUsForm.module.css": "/static/media/contact.ba88f825.jpg",
+    "static/media/creamy-mashed-potatoes.jpg": "/static/media/creamy-mashed-potatoes.26cacbe6.jpg",
+    "static/media/deruny.jpg": "/static/media/deruny.bbe9095e.jpg",
+    "static/media/error-image.jpg": "/static/media/error-image.00ea0a51.jpg",
+    "static/media/index.css": "/static/media/food-wallpaper.cee6608e.jpg",
+    "static/media/funeral-potatoes.jpg": "/static/media/funeral-potatoes.133000b3.jpg",
+    "static/media/meatballs.jpg": "/static/media/meatballs.c58e8131.jpg",
+    "static/media/pesto-lasagna-rolls.jpg": "/static/media/pesto-lasagna-rolls.9882858f.jpg",
+    "static/media/roasted-brussel-sprouts.jpg": "/static/media/roasted-brussel-sprouts.3468e786.jpg",
+    "static/media/smoothy.jpg": "/static/media/smoothy.852cd467.jpg",
+    "static/media/stuffed-bell-peppers.jpg": "/static/media/stuffed-bell-peppers.b0a5f9cf.jpg",
+    "static/media/team.jpg": "/static/media/team.181e2a84.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab683a5a.js",
+    "static/js/2.2d884967.chunk.js",
+    "static/css/main.4b3463fa.chunk.css",
+    "static/js/main.b8b8789d.chunk.js"
+  ]
+}

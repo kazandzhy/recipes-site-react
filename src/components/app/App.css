@@ -1,0 +1,8 @@
+.UnknownPage h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.UnknownPage {
+  min-height: 40em;
+}

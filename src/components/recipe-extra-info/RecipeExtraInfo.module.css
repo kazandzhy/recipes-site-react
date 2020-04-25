@@ -1,0 +1,62 @@
+.RecipeExtraInfo {
+  clear: both;
+  margin-left: 7%;
+  margin-right: 5%;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.ExtraInfo {
+  width: 30%;
+  margin-right: 2.5%;
+  display: inline-block;
+}
+
+.ExtraLink {
+  width: 30%;
+  margin-right: 6%;
+  display: inline-block;
+}
+
+.ImportantInfo {
+  width: 27%;
+  display: inline-block;
+}
+
+.RecipeExtraInfo h2 {
+  font-weight: 900;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  color: #1c110a;
+}
+
+.RecipeExtraInfo p {
+  font-size: 1.2em;
+  font-family: sans-serif;
+}
+
+.ImportantInfo p {
+  color: #800000;
+}
+
+.RecipeExtraInfo a {
+  color: blue;
+  font-weight: bold;
+}
+
+.RecipeExtraInfo a:hover {
+  color: #50a2a7;
+}
+
+.RecipeExtraInfo a:focus {
+  outline: 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .ExtraInfo,
+  .ExtraLink,
+  .ImportantInfo {
+    display: block;
+    width: 100%;
+  }
+}

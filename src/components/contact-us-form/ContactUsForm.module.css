@@ -1,0 +1,45 @@
+.ContactUsForm fieldset {
+  padding-left: 5%;
+  padding-top: 1em;
+  width: 100%;
+  border-radius: 1em;
+  background-image: url("../../assets/images/contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 5px 10px 8px 10px #2f2626;
+}
+
+@media only screen and (max-width: 650px) {
+  .ContactUsForm fieldset {
+    padding-left: 0;
+  }
+
+  .ContactUsForm {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ContactUsForm fieldset {
+    background-image: url("../../assets/images/contact-small.jpg");
+    height: 25em;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .ContactUsForm fieldset {
+    height: 25em;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .ContactUsForm {
+    width: 94%;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .ContactUsForm fieldset {
+    height: 23em;
+  }
+}

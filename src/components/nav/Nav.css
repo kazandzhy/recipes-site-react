@@ -1,0 +1,41 @@
+.Nav {
+  padding-left: 0.625em;
+}
+
+nav ul li {
+  border-right: 1px solid;
+}
+
+nav li {
+  display: inline;
+}
+
+nav {
+  background-color: #1c110a;
+  height: 5em;
+  padding: 1.5em;
+  color: #5f4c4c;
+  width: 100%;
+  z-index: 1000;
+  min-width: 18.75em;
+}
+
+@media only screen and (max-width: 500px) {
+  nav {
+    height: 12em;
+    padding-top: 1em;
+  }
+
+  #navContainer ul {
+    text-align: center;
+  }
+
+  nav li {
+    display: block;
+    padding: 0.4em;
+  }
+
+  nav ul li {
+    border-right: 0;
+  }
+}
