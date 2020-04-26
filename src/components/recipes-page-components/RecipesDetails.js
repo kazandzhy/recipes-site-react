@@ -3,8 +3,6 @@ import Images from "../../assets";
 import { Image, Li, Ol } from "../ui";
 import RecipesData from "../recipes-database/RecipesData";
 import CookTime from "../cook-time";
-import Spinner from "../spinner";
-import ErrorIndicator from "../error-indicator";
 
 import s from "./RecipesDetails.module.css";
 
@@ -15,45 +13,25 @@ export default class RecipesDetails extends Component {
 
   state = {
     recipe: null,
-    loading: true,
   };
 
   componentDidMount() {
-    this.updateRecipe();
+    this.updateItem();
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.itemId !== prevProps.itemId) {
-      this.updateRecipe();
+      this.updateItem();
     }
   }
 
-  onRecipeLoaded = (recipe) => {
-    this.setState({
-      recipe,
-      loading: false,
-      error: false,
-    });
-  };
-
-  onError = (error) => {
-    this.setState({
-      error: true,
-      loading: false,
-    });
-  };
-
-  updateRecipe() {
+  updateItem() {
     const { itemId } = this.props;
     if (!itemId) {
       return;
     }
     const recipe = this.recipes.getRecipe(itemId);
-    try {
-      this.onRecipeLoaded(recipe);
-    } catch (error) {
-      this.onError(error);
-    }
+    this.setState({ recipe });
   }
 
   renderIngredients(ingrs) {
@@ -71,31 +49,19 @@ export default class RecipesDetails extends Component {
   }
 
   render() {
-    const { recipe, loading, error } = this.state;
+    const { recipe } = this.state;
     if (!recipe) {
-      return <Spinner />;
+      return <h2 className={s.SelectRecipe}>Select recipe from the list!</h2>;
     }
-
-    const hasData = !(loading || error);
-
-    const errorMessage = error ? <ErrorIndicator /> : null;
-    const spinner = loading ? <Spinner /> : null;
-    const [{ ingredients, instructions, id, name, cookTime, yields }] = recipe;
-
+    const [{ name, id, yields, cookTime, ingredients, instructions }] = recipe;
     const ingrs = this.renderIngredients(ingredients);
     const instrs = this.renderInstructions(instructions);
-
-    const content = hasData ? (
-      <Image src={Images[id]} alt="Recipe Image" />
-    ) : null;
 
     return (
       <div className={s.RecipesDetails}>
         <div className={s.RecipeContent}>
           <h1>{name}</h1>
-          {errorMessage}
-          {spinner}
-          {content}
+          <Image src={Images[id]} alt="Recipe Image" />
           <p>Yield: {yields} servings</p>
           <CookTime cookTime={cookTime} />
           <Ol headText="Ingredients">{ingrs}</Ol>
