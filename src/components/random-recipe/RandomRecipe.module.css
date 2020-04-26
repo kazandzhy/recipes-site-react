@@ -3,6 +3,7 @@
   height: auto;
   overflow: hidden;
   padding-bottom: 3em;
+  min-height: 20em;
 }
 
 .RandomRecipe img {
