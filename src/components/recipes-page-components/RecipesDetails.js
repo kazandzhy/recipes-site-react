@@ -44,17 +44,20 @@ export default class RecipesDetails extends Component {
     });
   };
 
-  updateItem() {
+  onLoad = () => {
     this.setState({
       loading: true,
       error: false,
     });
+  };
+
+  updateItem() {
+    this.onLoad();
     const { itemId } = this.props;
     if (!itemId) {
       return;
     }
     const recipe = this.recipes.getRecipe(itemId);
-    this.setState({ recipe, loading: false });
     try {
       this.onRecipeLoaded(recipe);
     } catch (error) {
