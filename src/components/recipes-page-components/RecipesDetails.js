@@ -17,6 +17,7 @@ export default class RecipesDetails extends Component {
     recipe: null,
     loading: true,
     error: false,
+    imageLoading: true,
   };
 
   componentDidMount() {
@@ -28,6 +29,12 @@ export default class RecipesDetails extends Component {
       this.updateItem();
     }
   }
+
+  onLoadImage = () => {
+    this.setState({
+      imageLoading: false,
+    });
+  };
 
   onRecipeLoaded = (recipe) => {
     this.setState({
@@ -80,7 +87,7 @@ export default class RecipesDetails extends Component {
   }
 
   render() {
-    const { recipe, loading, error } = this.state;
+    const { recipe, loading, error, imageLoading } = this.state;
 
     if (loading) {
       return <Spinner />;
@@ -98,7 +105,11 @@ export default class RecipesDetails extends Component {
       <div className={s.RecipesDetails}>
         <div className={s.RecipeContent}>
           <h1>{name}</h1>
-          <Image src={Images[id]} alt="Recipe Image" />
+          <Image
+            src={Images[id]}
+            alt="Recipe Image"
+            onLoad={this.onLoadImage}
+          />
           <p>Yield: {yields} servings</p>
           <CookTime cookTime={cookTime} />
           <Ol headText="Ingredients">{ingrs}</Ol>
