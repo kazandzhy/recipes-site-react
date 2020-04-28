@@ -51,6 +51,10 @@ class RandomRecipe extends Component {
   };
 
   updateRecipe = () => {
+    this.setState({
+      loading: true,
+      error: false,
+    });
     const id = Math.floor(Math.random() * 10 + 1);
     const recipe = this.recipes.getRecipe(id);
     try {

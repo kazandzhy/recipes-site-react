@@ -3,6 +3,8 @@ import Images from "../../assets";
 import { Image, Li, Ol } from "../ui";
 import RecipesData from "../recipes-database/RecipesData";
 import CookTime from "../cook-time";
+import Spinner from "../spinner";
+import ErrorIndicator from "../error-indicator";
 
 import s from "./RecipesDetails.module.css";
 
@@ -13,6 +15,8 @@ export default class RecipesDetails extends Component {
 
   state = {
     recipe: null,
+    loading: true,
+    error: false,
   };
 
   componentDidMount() {
@@ -25,13 +29,37 @@ export default class RecipesDetails extends Component {
     }
   }
 
+  onRecipeLoaded = (recipe) => {
+    this.setState({
+      recipe,
+      loading: false,
+      error: false,
+    });
+  };
+
+  onError = (error) => {
+    this.setState({
+      error: true,
+      loading: false,
+    });
+  };
+
   updateItem() {
+    this.setState({
+      loading: true,
+      error: false,
+    });
     const { itemId } = this.props;
     if (!itemId) {
       return;
     }
     const recipe = this.recipes.getRecipe(itemId);
-    this.setState({ recipe });
+    this.setState({ recipe, loading: false });
+    try {
+      this.onRecipeLoaded(recipe);
+    } catch (error) {
+      this.onError(error);
+    }
   }
 
   renderIngredients(ingrs) {
@@ -49,10 +77,16 @@ export default class RecipesDetails extends Component {
   }
 
   render() {
-    const { recipe } = this.state;
-    if (!recipe) {
-      return <h2 className={s.SelectRecipe}>Select recipe from the list!</h2>;
+    const { recipe, loading, error } = this.state;
+
+    if (loading) {
+      return <Spinner />;
     }
+
+    if (error) {
+      return <ErrorIndicator />;
+    }
+
     const [{ name, id, yields, cookTime, ingredients, instructions }] = recipe;
     const ingrs = this.renderIngredients(ingredients);
     const instrs = this.renderInstructions(instructions);
