@@ -50,15 +50,7 @@ class RandomRecipe extends Component {
     });
   };
 
-  onLoad = () => {
-    this.setState({
-      loading: true,
-      error: false,
-    });
-  };
-
   updateRecipe = () => {
-    this.onLoad();
     const id = Math.floor(Math.random() * 10 + 1);
     this.recipes.getRecipe(id).then(this.onRecipeLoaded).catch(this.onError);
   };
