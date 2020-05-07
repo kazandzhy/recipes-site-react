@@ -60,12 +60,7 @@ class RandomRecipe extends Component {
   updateRecipe = () => {
     this.onLoad();
     const id = Math.floor(Math.random() * 10 + 1);
-    const recipe = this.recipes.getRecipe(id);
-    try {
-      this.onRecipeLoaded(recipe);
-    } catch (error) {
-      this.onError(error);
-    }
+    this.recipes.getRecipe(id).then(this.onRecipeLoaded).catch(this.onError);
   };
 
   render() {

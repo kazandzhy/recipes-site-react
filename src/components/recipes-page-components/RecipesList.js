@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import RecipesData from "../recipes-database/RecipesData";
 import { Li, Ul } from "../ui";
+import Spinner from "../spinner";
+import ErrorIndicator from "../error-indicator";
 
 import s from "./RecipesList.module.css";
 
@@ -9,11 +11,28 @@ export default class RecipesList extends Component {
 
   state = {
     recipesList: null,
+    loading: true,
+    error: false,
+  };
+
+  onError = (err) => {
+    this.setState({
+      error: true,
+      loading: false,
+    });
   };
 
   componentDidMount() {
-    const recipesList = this.recipes.getAllRecipes();
-    this.setState({ recipesList });
+    this.recipes
+      .getAllRecipes()
+      .then((data) =>
+        this.setState({
+          recipesList: data,
+          loading: false,
+          error: false,
+        })
+      )
+      .catch(this.onError);
   }
 
   renderItems(arr) {
@@ -31,10 +50,16 @@ export default class RecipesList extends Component {
   }
 
   render() {
-    const { recipesList } = this.state;
+    const { recipesList, loading, error } = this.state;
 
     if (!recipesList) {
-      return <div></div>;
+      if (loading) {
+        return <Spinner />;
+      }
+
+      if (error) {
+        return <ErrorIndicator />;
+      }
     }
 
     const items = this.renderItems(recipesList);

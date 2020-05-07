@@ -290,10 +290,18 @@ export default class RecipesData {
   ];
 
   getAllRecipes = () => {
-    return this.recipes;
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(this.recipes);
+      }, 300);
+    });
   };
 
   getRecipe = (id) => {
-    return this.recipes.filter((recipe) => recipe.id === id);
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(this.recipes.filter((recipe) => recipe.id === id));
+      }, 300);
+    });
   };
 }
