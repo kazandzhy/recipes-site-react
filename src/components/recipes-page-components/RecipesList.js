@@ -54,7 +54,11 @@ export default class RecipesList extends Component {
 
     if (!recipesList) {
       if (loading) {
-        return <Spinner />;
+        return (
+          <div className={s.RecipesListSpinner}>
+            <Spinner />
+          </div>
+        );
       }
 
       if (error) {

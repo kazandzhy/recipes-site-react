@@ -29,6 +29,10 @@ ul.RecipesList {
   padding-bottom: 2em;
 }
 
+.RecipesListSpinner {
+  height: 47em;
+}
+
 @media only screen and (max-width: 930px) {
   .RecipesList {
     padding: 0 1em;

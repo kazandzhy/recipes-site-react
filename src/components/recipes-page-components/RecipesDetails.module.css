@@ -33,6 +33,10 @@
   box-shadow: 2px 3px 3px 3px #2f2626;
 }
 
+.RecipesDetailsSpinner {
+  height: 51em;
+}
+
 @media only screen and (max-width: 930px) {
   .RecipesDetails {
     padding: 1em;

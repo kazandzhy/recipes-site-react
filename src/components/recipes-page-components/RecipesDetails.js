@@ -79,7 +79,11 @@ export default class RecipesDetails extends Component {
     const { recipe, loading, error } = this.state;
 
     if (loading) {
-      return <Spinner />;
+      return (
+        <div className={s.RecipesDetailsSpinner}>
+          <Spinner />
+        </div>
+      );
     }
 
     if (error) {

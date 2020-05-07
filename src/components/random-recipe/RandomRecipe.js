@@ -70,7 +70,11 @@ class RandomRecipe extends Component {
     const hasData = !(loading || error);
 
     const errorMessage = error ? <ErrorIndicator /> : null;
-    const spinner = loading ? <Spinner /> : null;
+    const spinner = loading ? (
+      <div className={s.RandomRecipeSpinner}>
+        <Spinner />
+      </div>
+    ) : null;
 
     const content = hasData ? (
       <RecipeView recipe={recipe} history={history} />

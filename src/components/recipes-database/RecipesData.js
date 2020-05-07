@@ -301,7 +301,7 @@ export default class RecipesData {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(this.recipes.filter((recipe) => recipe.id === id));
-      }, 300);
+      }, 200);
     });
   };
 }
