@@ -1,6 +1,6 @@
 # RECIPES SITE - REACT
 
-This app, written with the React JavaScript framework, retrieves data from an existing recipe database and displays it in a user-friendly way. It uses modern ES6 features and is divided into small components that are easy to test and maintain. Some of the main components include service-context, error-boundary, error-indicator, spinner, search-panel, and high-order components.
+This app, written with the React JavaScript framework, retrieves data from an existing recipe database and displays it in a user-friendly way. It uses modern ES6 features and is divided into small components that are easy to test and maintain. Some of the main components include service-context, error-boundary, error-indicator, spinner, and high-order components.
 
 The main functionalities are:
 - Display a random recipe with ability to navigate to the recipe page
